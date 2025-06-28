@@ -14,8 +14,6 @@ jobs:
               run: pwd
             - name: Install Dependencies
               run: |
-            - name: Install Dependencies
-              run: |
                   cd ./starting_project && npm ci
             - name: Run Tests
               run: |
