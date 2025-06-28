@@ -1,0 +1,10 @@
+name: First Workflow #name of the workflow
+on: workflow_dispatch #trigger: waits for the user to manually start the workflow
+jobs: #define jobs
+  first_job: #job_name
+    runs-on: ubuntu-latest #define runner in which environment it should run on
+    steps: #define the steps
+      - name: Print greeting #step-name
+        run: echo "Hello World" #define the command to be executed in command-line
+      - name: Print goodbye
+        run: echo "Done - Bye"
