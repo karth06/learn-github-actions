@@ -8,3 +8,7 @@ jobs: #define jobs
         run: echo "Hello World" #define the command to be executed in command-line
       - name: Print goodbye
         run: echo "Done - Bye"
+      - name: Run Multiline shell commands
+        run: |
+            echo "First Output"
+            echo "Second Output"
