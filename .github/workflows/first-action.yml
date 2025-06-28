@@ -9,6 +9,6 @@ jobs: #define jobs
       - name: Print goodbye
         run: echo "Done - Bye"
       - name: Run Multiline shell commands
-        run: |
+        run: | #define multiline commands
             echo "First Output"
             echo "Second Output"
