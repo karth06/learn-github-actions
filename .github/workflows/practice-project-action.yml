@@ -13,6 +13,8 @@ jobs:
             - name: Install Dependencies
               run:  |
                     cd ./practice_project && npm ci
-            - name: run eslint.json file
+            - name: install eslint
+              run: npm install eslint --save-dev
+            - name: run eslint
               run:  |
                     cd ./practice_project && eslint .
