@@ -1,5 +1,5 @@
 name: Test Project
-on: push #define the event when to run the workflow
+on: [push, workflow_dispatch] #define the event when to run the workflow
 jobs:
     test:
         runs-on: ubuntu-latest
