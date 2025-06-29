@@ -10,11 +10,11 @@ jobs:
               uses: actions/setup-node@v4
               with:
                     node-version: 18
+            - name: install eslint
+              run: npm install eslint --save-dev
             - name: Install Dependencies
               run:  |
                     cd ./practice_project && npm ci
-            - name: install eslint
-              run: npm install eslint --save-dev
             - name: run eslint
               run:  |
                     cd ./practice_project && eslint .
