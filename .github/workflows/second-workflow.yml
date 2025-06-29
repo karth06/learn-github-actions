@@ -7,14 +7,32 @@ jobs:
             - name: Get the code from repository
               uses: actions/checkout@v4
             - name: Install NodeJS
-              uses:  actions/setup-node@v4
+              uses: actions/setup-node@v4
               with:
                 node-version: 18
-            - name: Print working directory
-              run: pwd
             - name: Install Dependencies
               run: |
                   cd ./starting_project && npm ci
             - name: Run Tests
               run: |
                   cd ./starting_project && npm test
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get the code from repository
+              uses: actions/checkout@v4
+            - name: Install NodeJS
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18
+            - name: Install Dependencies
+              run: |
+                  cd ./starting_project && npm ci
+            - name: Build Project
+              run: |
+                  cd ./starting_project && npm run build
+            - name: Deploy
+              run: |
+                  cd ./starting_project && npm run deploy
+            - name: Deploy
+              run: echo "Deploying..."      
