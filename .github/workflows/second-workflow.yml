@@ -32,7 +32,4 @@ jobs:
               run: |
                   cd ./starting_project && npm run build
             - name: Deploy
-              run: |
-                  cd ./starting_project && npm run deploy
-            - name: Deploy
               run: echo "Deploying..."      
