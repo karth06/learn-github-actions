@@ -17,4 +17,4 @@ jobs:
                     cd ./practice_project && npm ci
             - name: run eslint
               run:  |
-                    cd ./practice_project && eslint .
+                    cd ./practice_project && npm eslint .
