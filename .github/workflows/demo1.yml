@@ -12,13 +12,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
               node-version: 18
+      - name: change directory
+        run: cd ./Starting_Project_New
       - name: Install dependencies
         run:  |
-              cd ./Starting_Project_New
               npm ci
       - name: Test code
         run:  |
-              cd ./Starting_Project_New
               npm run test
       - name: Build code
         run: npm run build
