@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output event data
-        run: echo "${{ toJSON(github.event) }}"
+        run:  echo "${{toJSON(github.event)}}"
       - name: Get code
         uses: actions/checkout@v4
       - name: change directory
