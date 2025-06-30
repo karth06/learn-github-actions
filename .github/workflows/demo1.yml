@@ -17,7 +17,9 @@ jobs:
               cd ./Starting_Project_New
               npm ci
       - name: Test code
-        run: npm run test
+        run:  |
+              cd ./Starting_Project_New
+              npm run test
       - name: Build code
         run: npm run build
       - name: Deploy project
