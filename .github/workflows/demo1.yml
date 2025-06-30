@@ -8,10 +8,14 @@ jobs:
         run:  echo "${{toJSON(github.event)}}"
       - name: Get code
         uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with:
+              node-version: 18
       - name: Install dependencies
         run:  |
-              npm ci
               cd ./Starting_Project_New
+              npm ci
       - name: Test code
         run: npm run test
       - name: Build code
